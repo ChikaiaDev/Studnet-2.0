@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>MyJob.com</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<!--Bootstrap CDN-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- <link href="/styles/site.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/loader.css">
+    <script type="text/javascript" src="public/js/loader.js"></script>
+
+
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	 <body>
+	   
+
+		<div id="header">
+			<div class="container">
+				<div role="navigation" class="navbar navbar-default navbar-fixed-top">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+							<div class="navbar-brand ">
+							    <span class="text-warning"><i class="fa fa-life-ring fa-spin fa-lg" aria-hidden="true"></i></span>
+								&nbsp;&nbsp;
+								<a href="/">MyJob.com</a>
+							</div>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-left">
+									{{# each navLinks}}
+									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+										<a href="{{ href }}">{{ label }}</a>
+									</li>
+								{{/each}}
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								{{#if user}}
+								<li><a href="/keystone/signout">Sign Out</a></li>
+								{{else}}
+								<!-- <li><a href="/keystone/signin">Sign In</a></li> -->
+								{{/if}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div  id="body" >
+           	{{#if messages}}
+				<div class="container" id="flash-messages" style="margin-top:80px" >
+				    <div class="col-xs-6 col-lg-6 col-xs-offset-3 col-lg-offset-3"> 
+				           
+							{{#if messages.info}}
+							<div class="alert alert-info">
+									{{{flashMessages messages.info}}}
+							</div>
+							{{/if}}
+							{{#if messages.success}}
+							<div class="alert alert-success">
+									{{{flashMessages messages.success}}}
+							</div>
+							{{/if}}
+							{{#if messages.warning}}
+							<div class="alert alert-warning">
+									{{{flashMessages messages.warning}}}
+							</div>
+							{{/if}}
+							{{#if messages.error}}
+							<div class="alert alert-danger">
+									{{{flashMessages messages.error}}}
+							</div>
+							{{/if}}
+					</div>		
+				</div>
+			{{/if}}
+			{{{body}}}
+			
+		</div>
+		 <div id="loader-wrapper">
+	     	<div id="loader"></div>
+	    </div>
+	
+		<div  class="text-center footer" id="footer">
+			<p> Designed & Developed by <a href="http://techwizz.in" target="_blank">Techwizz</a></p>
+		</div>
+		
+
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		{{{isAdminEditorJS user}}}
+	 </body>
+</html>

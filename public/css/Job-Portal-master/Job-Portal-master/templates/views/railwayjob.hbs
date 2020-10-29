@@ -1,0 +1,178 @@
+<div class="container-fluid" style="margin-top:80px;">
+    <p> <a href="/railwayjobs" class="btn btn-warning btn-sm">Go To Back</a> </p>
+    <div class="row">
+        <div class="col-xs-2 col-lg-2">
+            <div class="panel panel-default">
+                <div class="panel panel-body">
+                    <ul class="nav nav-pills nav-stacked ">
+                        <li class="active"><a href="#">Notification</a></li>
+                        <li><a href="#">Latest Notifications</a></li>
+                        <li><a href="#">Upcoming Notifications</a></li>
+                        <li><a href="#">Examwise Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel panel-body">
+                    <ul class="nav nav-pills nav-stacked ">
+                        <li class="active"><a href="#">Latest Announcements</a></li>
+                        <li><a href="#">Exam Results</a></li>
+                        <li><a href="#">Interiew Results</a></li>
+                        <li><a href="#">Exam Date Reminder</a></li>
+                        <li><a href="#">Written Marks</a></li>
+                        <li><a href="#">Admit Card / Call Letter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-7 col-lg-7 ">
+            <div class="panel panel-primary">
+                <div class="panel panel-heading">
+                    <ul>
+                        <h4 class="text-success">{{data.railwayjob.boardName}}&nbsp;Recuitement for&nbsp;{{data.railwayjob.title}}</h4> </ul>
+                </div>
+                <div class="panel panel-body">
+                    <ul>
+                        <div>
+                            <label>Recruitement for:</label>&nbsp;&nbsp;{{{data.railwayjob.aboutJob}}} </div>
+                        <br>
+                        <div>
+                            <label>Age Limit:</label>&nbsp;&nbsp;
+                            <p>{{data.railwayjob.ageLimit}}</p>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Eligiblity:</label>&nbsp;&nbsp;
+                            <p>{{data.railwayjob.qualification}}</p>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Educational Qualification:</label>&nbsp;&nbsp;
+                            <p>{{data.railwayjob.selectionProcess}}</p>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Total post:</label>&nbsp;&nbsp;
+                            <p>{{data.railwayjob.totalPost}}</p>
+                            <label>Name of the Posts:</label>&nbsp;&nbsp;
+                            <p>{{{data.railwayjob.postCategories}}}</p>
+                        </div>
+                        <div>
+                            <label>Application Fee:</label>&nbsp;&nbsp;
+                            <p>{{data.railwayjob.applicationFee}}</p>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Instructions to Apply Online:</label>&nbsp;&nbsp;
+                            <p>{{{data.railwayjob.instructionsHowToApply}}}</p>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Important Dates:</label>&nbsp;&nbsp;
+                            <table class="table table-hover table-responsive table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Starting Date to Apply Online & for Payment of fee</td>
+                                        <td>{{data.railwayjob.publishedDate}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Date to Apply Online</td>
+                                        <td>{{data.railwayjob.lastDate}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Date For Printing Hall ticket</td>
+                                        <td>{{data.railwayjob.downloadHallticketDate}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tentative Date of Online Test</td>
+                                        <td>{{data.railwayjob.examDate}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </diV>
+                        <div>
+                            <label>Apply Online</label>&nbsp;&nbsp;
+                            <p><a href="{{{data.railwayjob.applicationLink}}}">Click Here to Apply</a></p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-lg-3 ">
+            <!--Accordian Starts-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                <div id="collapse1" class="panel-collapse collapse  in">
+                    <div class=" item active panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <!--Accordian Ends-->
+            <!--Blockquatoes  Starting-->
+            <div class="panel panel-primary">
+                <div class="panel panel-heading"><h4 class="panel-title text-success">Testimonimals</h4></div>
+                <div class=" panel panel-body">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/>
+                            <div class="item">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/>
+                            <div class="item ">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/>
+                            <div class="item">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

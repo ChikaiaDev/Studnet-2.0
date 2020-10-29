@@ -1,0 +1,42 @@
+.series-btn {
+
+    border-radius: 0px 0px auto auto;
+    border: none;
+    width: 100px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.series-btn:hover {
+    background-color: rgba(9, 88, 102, 0.705);
+}
+
+.series-jumbotron {
+    margin-top: -2rem;
+    background-color: rgb(88, 88, 88);
+    color: aliceblue;
+}
+
+.series-counter {
+    border: none;
+    background-color: rgb(88, 88, 88);
+    color: white;
+}
+
+.profile-panel {
+    background-color: white;
+
+}
+
+
+/* series */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.series-list {
+    width: 250px;
+    height: 22rem;
+}

@@ -1,0 +1,106 @@
+<p></p>
+<br/>
+<div class="container-fluid" style="margin-top:80px;">
+    <div class="row">
+        <div class="col-xs-2 col-lg-2">
+            <div style="" class="list-group"> <a href="/engineeringjobs" class="active list-group-item">Engineering Jobs</a> {{# each data.categories }} <a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a> {{/each}} </div>
+        </div>
+        <div class="col-xs-7 col-lg-7">
+            <div class="engineering"> {{# each data.posts.results}}
+                <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="engpost">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h5><a href="{{postUrl slug}}">{{{title}}}</a></h5>
+                            <ul class=" text-warning pull-right " style="margin-top:-28px; font-size:12px">
+                                <span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>&nbsp;Admin  </span>&nbsp;&nbsp;
+                                <span><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>{{date}}</span>
+
+                            </ul>
+                        </div>
+                        <div class="panel-body"> {{#if image}} <img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img  pull-left img-responsive"> {{/if}}
+                            <p>{{{content.brief}}}</p>
+                            <p class="read-more  pull-right"><a href="{{postUrl slug}}" class="btn btn-warning btn-sm">Read more...</a></p>
+                        </div>
+                    </div>
+                </div> {{/each}} </div>
+        </div>
+        <div class="col-xs-3 col-lg-3 ">
+            <!--Accordian Starts-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                <div id="collapse1" class="panel-collapse collapse  in">
+                    <div class=" item active panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <!--Accordian Ends-->
+            <!--Blockquatoes  Starting-->
+            <div class="panel panel-primary">
+                <div class="panel panel-heading "><h4 class="panel-title text-success">Testimonimals</h4></div>
+                <div class=" panel panel-body">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/>
+                            <div class="item">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/>
+                            <div class="item ">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/>
+                            <div class="item">
+                                <blockquote class="panel-success">
+                                    <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                    <footer class="text-success">From WWF's website</footer>
+                                </blockquote>
+                            </div>
+                            <br/> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center "> {{>pagination}} </div>
+</div>

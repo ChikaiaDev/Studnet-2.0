@@ -1,0 +1,62 @@
+<div class="container-fluid" style="margin-top:60px;">
+    <h3>IT Jobs </h3>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="row">
+                <div class="col-lg-2 col-xs-2">
+                    <div class="panel panel-default">
+                        <div class="panel panel-body">
+                            <ul class="nav nav-pills nav-stacked ">
+                                <li class="active"><a href="#">Notification</a></li>
+                                <li><a href="#">Latest Notifications</a></li>
+                                <li><a href="#">Upcoming Notifications</a></li>
+                                <li><a href="#">Examwise Information</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel panel-body">
+                            <ul class="nav nav-pills nav-stacked ">
+                                <li class="active"><a href="#">Latest Announcements</a></li>
+                                <li><a href="#">Exam Results</a></li>
+                                <li><a href="#">Interiew Results</a></li>
+                                <li><a href="#">Exam Date Reminder</a></li>
+                                <li><a href="#">Written Marks</a></li>
+                                <li><a href="#">Admit Card / Call Letter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-xs-10">
+                    <table class="table table-bordered table-striped table-hover table-responsive ">
+                        <thead>
+                            <tr class="success">
+                                <th>Post Date</th>
+                                <th>Company Name</th>
+                                <th>Post Name</th>
+                                <th>Qualification</th>
+                                <th>Location</th>
+                                <th>Walk-In Date</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody> {{# each itjobs}}
+                            <tr>
+                                <td>{{{publishedDate}}}</td>
+                                <td>{{{companyName}}}</td>
+                                <td>{{{title}}}</td>
+                                <td>{{{education}}}</td>
+                                <td>{{{location}}}</td>
+                                <td>{{{walkInDate}}}</td>
+                                <td>
+                                    <a href="{{itjobUrl slug}}">
+                                        <button type="button" class="btn btn-warning btn-sm">View Details</button>
+                                    </a>
+                                </td>
+                            </tr> {{/each}} </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

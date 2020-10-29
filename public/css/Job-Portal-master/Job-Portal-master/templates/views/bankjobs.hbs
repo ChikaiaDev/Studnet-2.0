@@ -1,0 +1,127 @@
+<div class="container-fluid" style="margin-top:60px;">
+    <h3>Bank Jobs </h3>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="row ">
+                <div class="col-xs-2 col-lg-2 ">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked  ">
+                                <li class="active "><a href="#">Notification</a></li>
+                                <li><a href="#">Latest Notifications</a></li>
+                                <li><a href="#">Upcoming Notifications</a></li>
+                                <li><a href="#">Examwise Information</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked ">
+                                <li class="active"><a href="#">Latest Announcements</a></li>
+                                <li><a href="#">Exam Results</a></li>
+                                <li><a href="#">Interview Results</a></li>
+                                <li><a href="#">Interview Schedule</a></li>
+                                <li><a href="#">Exam  Date Reminder</a></li>
+                                <li><a href="#">Written Marks</a></li>
+                                <li><a href="#">Admit Card / Call Letter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-7 col-lg-7  ">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> {{# each bankjobs}}
+                            <div class="panel panel-primary">
+                                <div class="panel panel-heading">
+                                    <h5 class="text-success">{{{title }}}</a></h5>
+                                    <ul class=" text-warning pull-right " style="margin-top:-28px; font-size:12px">
+                                        <span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>&nbsp;Admin  </span>&nbsp;&nbsp;
+                                        <span><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>&nbsp;{{publishedDate}}</span>
+
+                                    </ul>
+                                </div>
+                                <div class="panel panel-body"> {{#if image}} <img src="{{{cloudinaryUrl image width=100px height=300px crop='fit' }}}" class=" thumbnail  pull-left img-responsive "> {{/if}}
+                                    <p>{{{aboutJob}}}</p> {{#if instructionsHowToApply}}
+                                    <p class="read-more"> <a href="{{bankjobUrl slug}}" class="btn btn-warning  btn-sm pull-right">Read more...</a> </p> {{/if}} </div>
+                            </div> {{/each}} </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-lg-3 ">
+                    <!--Accordian Starts-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                        <div id="collapse1" class="panel-collapse collapse  in">
+                            <div class=" item active panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-success">
+                                <p>Collapsible Group 1<span  data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="glyphicon glyphicon-plus pull-right"></span></p>
+                            </h4> </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                    <!--Accordian Ends-->
+                    <!--Blockquatoes  Starting-->
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading "><h4 class="panel-title text-success">Testimonimals</h4></div>
+                        <div class=" panel panel-body">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <blockquote class="panel-success">
+                                            <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                            <footer class="text-success">From WWF's website</footer>
+                                        </blockquote>
+                                    </div>
+                                    <br/>
+                                    <div class="item">
+                                        <blockquote class="panel-success">
+                                            <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                            <footer class="text-success">From WWF's website</footer>
+                                        </blockquote>
+                                    </div>
+                                    <br/>
+                                    <div class="item ">
+                                        <blockquote class="panel-success">
+                                            <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                            <footer class="text-success">From WWF's website</footer>
+                                        </blockquote>
+                                    </div>
+                                    <br/>
+                                    <div class="item">
+                                        <blockquote class="panel-success">
+                                            <p>For 50 years, WWF has been protecting the future of nature.</p>
+                                            <footer class="text-success">From WWF's website</footer>
+                                        </blockquote>
+                                    </div>
+                                    <br/> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
